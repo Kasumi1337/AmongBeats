@@ -1,0 +1,65 @@
+body {
+    background: #121212;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container { width: 100%; max-width: 500px; text-align: center; }
+
+.card {
+    background: #1e1e1e;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    margin-bottom: 20px;
+}
+
+input {
+    width: 90%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: 1px solid #333;
+    background: #252525;
+    color: white;
+}
+
+button {
+    padding: 12px 24px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    border: none;
+    transition: 0.3s;
+    margin: 5px;
+}
+
+.btn-primary { background: #1DB954; color: white; }
+.btn-secondary { background: #333; color: white; }
+.hidden { display: none; }
+
+ul { list-style: none; padding: 0; }
+li { background: #282828; padding: 10px; margin: 5px 0; border-radius: 5px; }
+
+.kick-btn {
+    background: #ff4444;
+    padding: 5px 10px;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.song-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #333;
+    padding: 8px;
+    margin: 4px 0;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.song-item:hover { background: #444; }
