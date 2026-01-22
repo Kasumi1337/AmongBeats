@@ -1,0 +1,262 @@
+body {
+    background: url('./assets/bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 99vh;
+}
+
+.box {
+    width: 90vw;
+    height: 90vh;
+    border: 12px solid #9750CF;
+    border-radius: 54px;
+}
+
+.pp {
+    border-radius: 50%;
+    border: 10px solid white;
+    border-collapse: separate;
+    padding: 10px;
+}
+
+.logo {
+    position: absolute;
+    top: 120px;
+}
+.card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    top: 70px;
+    background-color: rgba(75, 47, 126, 0.62);
+    height: 60vh;
+    width: 85vw;
+    border-radius: 24px;
+}
+
+#section-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 90vw;
+    height: 90vh;
+    }
+
+#section-menu h1 {
+    position: absolute;
+    top: 50px;
+    font-size: 64px;
+}
+
+#username::placeholder {
+    color: rgba(75, 47, 126, 0.62);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#username {
+    left: 0vw;
+    width: 70vw;
+    height: 60px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.create_room_btn {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #4D3184;
+    font-weight: 900;
+    background-color: white;   
+    text-shadow: 2px 4px 16px rgba(0,0,0,0.65);
+    width: 80vw;
+    height: 8vh;
+    border-radius: 30px;
+    font-size: 54px;
+}
+#roomInput {
+    margin-top: 70px;
+    width: 50vw;
+    height: 120px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0,0,0,0.9);
+    border-radius: 12px;
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.join_room_btn {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    color: #FFFFFF;
+    font-weight: 900;
+    background-color: #4D3184;   
+    text-shadow: 2px 4px 16px rgba(255,255,255,0.65);
+    width: 80vw;
+    height: 8vh;
+    border-radius: 30px;
+    font-size: 54px;
+}
+#section-lobby {
+    position: relative;
+    width: 90vw;
+    height: 90vh;
+}
+
+#section-lobby h2 {
+    font-size: 54px;
+}
+#section-select
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+}
+
+#section-select h2 {
+    position: relativfe;
+    top: 50px;  
+    font-size: 64px;
+    padding-left: 20px;
+}
+#section-select input {
+    position: relative;
+    margin-left: 100px;
+    width: 80vw;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(0,0,0,0.3);
+    border-radius: 12px;
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}
+
+.display_room_box {
+    background: #463566;
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+    margin-top: 30px;
+    color: #a78bfa;    
+    text-decoration: underline;
+}
+.list_player h3 {
+    font-size: 42px;
+}
+
+.list_player ul li {
+    font-size: 54px;
+    height: 75px;
+    margin: 50px;
+}
+.list_player ul li button {
+    color: red; 
+    font-weight: 900;
+    background: none;
+    border: none;
+    position: relative;
+    top: 7px;
+    font-size: 54px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.start_btn {
+    position: absolute;
+    bottom: 10px;
+    height: 200px;
+    left: 5%;
+    width: 78vw;
+    border-radius: 32px;
+    background: #7CBF6E;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #242323;
+    font-size: 54px;
+    font-weight: 900;
+    }
+
+.wait_btn {
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    height: 200px;
+    left: 5%;
+    width: 78vw;
+    border-radius: 16px;
+    background: #fa8b8b;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #242323;
+    font-size: 54px;
+    font-weight: 900;
+}
+
+
+.song-card {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    position: relative;
+    right: 15px;
+    background-color: rgba(0,0,0,0.3);
+    transition: 0.2s ease;
+    }
+
+.song-card:active {
+    background-color: #8bfa90;
+}
+.song-card img {
+    display: flex;
+    align-self: flex-start;
+}
+
+.song-card button {
+    border: none;
+    background: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: white;
+    cursor: pointer;
+    font-size: 50px;
+    text-size-adjust: 12px;
+    text-align: center;
+    margin-right: 50px;
+    font-weight: 900;
+    color: #8bfa90;
+}
+.song-card img {
+    height: 190px;
+    max-width: 190px;
+}
+
+.song-card h3 {
+    font-size: 36px;
+    margin-left: 100px;
+}
+
+#section-game {
+    width: 100vw;
+    height: 98vh;
+}
+#section-game h2 {
+    position: absolute;
+    top: 50px;
+}
+    
