@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>AmongBeats</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -10,7 +13,11 @@
     <div id="section-menu">
             <img class="logo" width="600px" src="./assets/Union.svg" alt="">
         <div class="card">
-            <img class="pp" src="https://cdn.intra.42.fr/users/849659cfad506ac81c73c6b3228401e8/default.jpg" alt="">
+            <div class="pdp">
+                <ion-icon onclick="changePfpLeft()" class="arrow arrow-left" name="caret-back-outline"></ion-icon>
+                <img id="pp" class="pp" width="350px" src="./assets/icon/icon1.svg" alt="">
+                <ion-icon onclick="changePfpRight()" class="arrow arrow-right" name="caret-forward-outline"></ion-icon>
+            </div>
             <br><br><br>    
             <input type="text" id="username" autocomplete="on" placeholder="Enter your name">
             <br><br><br><br>
@@ -22,11 +29,9 @@
     </div>
 
     <div id="section-lobby" style="display:none">
-        <div class="display_room_box" onclick="copy()">
-            <h2 id="displayRoom"></h2>
-        </div>
         <div class="list_player"><br><br><br>
-            <h3>Joueurs présents :</h3>
+            <h3 class="waiting_room">Waiting Room</h3>
+            <h3 class="nbr-ppl">01 | 10</h3>
             <ul id="playerList">
                 <div class="parent">
                     <div class="div1"></div>
@@ -41,9 +46,10 @@
             </ul>
             <script>
             </script>
-            <button id="start_btn" class="start_btn" onclick="launchSelection()">START</button>
-            <button id="wait_btn" class="wait_btn">WAITING</button>
-
+            <button id="start_btn" class="start_btn" onclick="launchSelection()">START <img src="./assets/crown.png"> </button>
+            <div class="display_room_box" onclick="copy()">
+                <h2 id="displayRoom"></h2>
+            </div>
         </div>
     </div>
 
@@ -72,6 +78,8 @@
         <button onclick="location.reload()">Quitter et changer de pseudo</button>
     </div>
     </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script src="script.js"></script>
 </body>

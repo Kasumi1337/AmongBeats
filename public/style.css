@@ -1,3 +1,12 @@
+@font-face {
+  font-family: Outfit; /* set name */
+  src: url(./assets/outfit/Outfit-Black.ttf); /* url of the font */
+}
+
+* {
+    font-family: Outfit;
+}
+
 body {
     background: url('./assets/bg.png');
     background-size: cover;
@@ -10,16 +19,23 @@ body {
     min-height: 99vh;
 }
 
+.arrow {
+    font-size: 180px;
+    cursor: pointer;
+    position: relative;
+    bottom: 100px;
+    user-select: none;
+}
+
 .box {
     width: 90vw;
     height: 90vh;
     border: 12px solid #9750CF;
     border-radius: 54px;
 }
-
 .pp {
     border-radius: 50%;
-    border: 10px solid white;
+    border: 10px solid #8BDA7A;
     border-collapse: separate;
     padding: 10px;
 }
@@ -54,6 +70,15 @@ body {
     position: absolute;
     top: 50px;
     font-size: 64px;
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
 }
 
 #username::placeholder {
@@ -95,6 +120,25 @@ body {
     text-align: center;
     font-size: 40px;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.waiting_room {
+    position: relative;
+    background-color: rgba(90, 38, 135, 0.81);
+    width: 55vw;
+    height: 80px;
+    left: 20%;
+    bottom: 70px;
+    border-radius: 25px;
+    font-size: 60px;
+    text-align: center;
+}
+
+.nbr-ppl {
+    font-size: 50px;
+    position: relative;
+    left: 45%;
+    width: 200px;
 }
 
 .join_room_btn {
@@ -150,17 +194,18 @@ body {
 }
 
 .display_room_box {
-    background: #463566;
-    border-radius: 16px;
+    background: rgba(97, 58, 175, 0.68);
+    border-radius: 7px;
     padding: 20px;
+    width: 50vw;
+    position: relative;
+    left: 20%;
     text-align: center;
     margin-top: 30px;
-    color: #a78bfa;    
+    color: white;    
     text-decoration: underline;
 }
-.list_player h3 {
-    font-size: 42px;
-}
+
 
 .list_player ul li {
     font-size: 54px;
@@ -179,17 +224,20 @@ body {
 }
 
 .start_btn {
-    position: absolute;
+    position: relative;
     bottom: 10px;
     height: 200px;
-    left: 5%;
-    width: 78vw;
-    border-radius: 32px;
-    background: #7CBF6E;
+    left: 23%;
+    width: 50vw;
+    border-radius: 37px;
+    background: #F8F8F8;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #242323;
+    color: #8759E1;
     font-size: 54px;
-    font-weight: 900;
+    font-weight: bold;
+    }
+    .start_btn img {
+        width: 50px;
     }
 
 .wait_btn {

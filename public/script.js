@@ -76,6 +76,25 @@ function voteFor(playerId) {
     socket.emit('submitVote', playerId);
 }
 
+var pfp_count = 1;
+
+function changePfpLeft() {
+    if (pfp_count > 1)
+        pfp_count -= 1;
+    else
+        pfp_count = 7;
+    document.getElementById("pp").src = `./assets/icon/icon${pfp_count}.svg`
+}
+
+function changePfpRight() {
+    if (pfp_count < 7)
+        pfp_count += 1;
+    else
+        pfp_count = 1;
+    document.getElementById("pp").src = `./assets/icon/icon${pfp_count}.svg`
+}
+
+
 function copy() {
     navigator.clipboard .writeText(document.getElementById('displayRoom').innerText.slice(6))
     alert(document.getElementById('displayRoom').innerText.slice(6) + " copied")
@@ -86,13 +105,7 @@ socket.on('initRoom', (data) => {
     iAmAdmin = data.isAdmin;
     showSection('section-lobby');
     document.getElementById('displayRoom').innerText = "Room: " + data.roomId;
-    document.getElementById('box').style.border = "none"
     document.getElementById('displayRoom').onclick = "copy()"
-    if(data.isAdmin)
-    {
-        document.getElementById('wait_btn').style.dlispay = "none";
-        document.getElementById('start_btn').display = "block";
-    }
 });
 
 socket.on('updatePlayers', (players) => {
