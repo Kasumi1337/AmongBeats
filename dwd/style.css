@@ -1,0 +1,375 @@
+@font-face {
+  font-family: outfit; /* set name */
+  src: url(./assets/Outfit-Black.ttf); /* url of the font */
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(./assets/bg.png);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100vw;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: auto;
+    height: 90vh;
+    max-width: 95vw;
+    -webkit-user-select: none; /* Safari, Chrome, Opera */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* Internet Explorer/Edge */
+    user-select: none;         /* Standard syntax */
+    pointer-events: none;
+    z-index: 0;
+    object-fit: contain;
+}
+
+.head {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    max-width: 350px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 10;
+}
+
+.card {
+    display: inline-block;
+    position: relative;
+    z-index: 10;
+}
+
+.card-head {
+    width: 160px;
+    height: 30px;
+    text-align: center;
+    background-color: rgba(151, 80, 207, 0.6);
+    font-family: 'outfit';
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top-left-radius: 12px;
+    border-top-right-radius: 12px;
+}
+
+.card-main {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rgba(151, 80, 207, 0.6);
+    border-radius: 24px;
+    border-top-left-radius: 0px;
+    padding: 20px;
+}
+
+.card-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.card-icon img {
+    width: 200px;
+    height: 200px;
+    padding: 2px;
+    border-radius: 50%;
+    border: 6px solid #8BDA7A;
+}
+
+.card-icon ion-icon {
+    color: white;
+    font-size: 62px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.card-icon ion-icon:hover {
+    transform: scale(1.1);
+}
+
+.card-main input {
+    width: 100%;
+    max-width: 260px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgba(234, 234, 234, 0.43);
+    border: 1px solid white;
+    text-align: center;
+    font-size: 26px;
+    color: white;
+    padding: 0 10px;
+}
+
+.card-main input::placeholder {
+    color: white;
+    font-family: outfit;
+    font-weight: 200;
+}
+
+.selection {
+    margin-top: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    position: relative;
+    z-index: 10;
+}
+
+.selection button {
+    width: 230px;
+    height: 90px;
+    border-radius: 37px;
+    font-family: outfit;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.selection button:hover {
+    transform: translateY(-2px);
+}
+
+.selection button:active {
+    transform: translateY(0);
+}
+
+.create-btn {
+    background-color: rgba(248, 248, 248, 0.75);
+    border: 1px solid #8759E1;
+    color: #8759E1;
+    box-shadow: 0px 5px 0px #8759E1;
+}
+
+.create-btn:active {
+    box-shadow: 0px 2px 0px #8759E1;
+}
+
+.join-btn {
+    border: none;
+    background-color: #8548C3;
+    color: white;
+}
+
+/* Media Queries pour la responsivité */
+
+/* Tablettes et petits écrans */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .logo {
+        max-width: 350px;
+        margin-bottom: 10px;
+    }
+    
+    .box {
+        height: 88vh;
+        max-width: 95vw;
+    }
+    
+    .card-main {
+        max-width: 280px;
+        padding: 20px 15px;
+    }
+    
+    .card-icon img {
+        width: 150px;
+        height: 150px;
+        border: 5px solid #8BDA7A;
+    }
+    
+    .card-icon ion-icon {
+        font-size: 50px;
+    }
+    
+    .card-icon {
+        margin-bottom: 18px;
+    }
+    
+    .card-main input {
+        font-size: 22px;
+        height: 45px;
+    }
+    
+    .selection {
+        margin-top: 12px;
+        gap: 12px;
+    }
+    
+    .selection button {
+        width: 210px;
+        height: 75px;
+        font-size: 28px;
+    }
+}
+
+/* Smartphones */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .logo {
+        max-width: 280px;
+        margin-bottom: 8px;
+    }
+    
+    .box {
+        height: 95vh;
+        min-width: 100;
+    }
+    
+    .card-head {
+        width: 140px;
+        height: 28px;
+        font-size: 14px;
+    }
+    
+    .card-main {
+        max-width: 260px;
+        padding: 18px 15px;
+    }
+    
+    .card-icon {
+        gap: 5px;
+        margin-bottom: 15px;
+    }
+    
+    .card-icon img {
+        width: 120px;
+        height: 120px;
+        border: 4px solid #8BDA7A;
+    }
+    
+    .card-icon ion-icon {
+        font-size: 60px;
+    }
+    
+    .card-main input {
+        max-width: 220px;
+        font-size: 18px;
+        height: 38px;
+    }
+    
+    .selection {
+        margin-top: 10px;
+        gap: 10px;
+    }
+    
+    .selection button {
+        width: 180px;
+        height: 60px;
+        font-size: 24px;
+        border-radius: 30px;
+    }
+    
+    .create-btn {
+        box-shadow: 0px 3px 0px #8759E1;
+    }
+}
+
+/* Très petits écrans */
+@media screen and (max-width: 360px) {
+    .logo {
+        max-width: 240px;
+    }
+    
+    .card-head {
+        width: 130px;
+        height: 26px;
+        font-size: 13px;
+    }
+    
+    .card-main {
+        max-width: 240px;
+        padding: 15px 12px;
+    }
+    
+    .card-icon {
+        margin-bottom: 12px;
+    }
+    
+    .card-icon img {
+        width: 75px;
+        height: 75px;
+        border: 3px solid #8BDA7A;
+    }
+    
+    .card-icon ion-icon {
+        font-size: 35px;
+    }
+    
+    .card-main input {
+        max-width: 200px;
+        font-size: 16px;
+        height: 35px;
+    }
+    
+    .selection {
+        margin-top: 8px;
+        gap: 8px;
+    }
+    
+    .selection button {
+        width: 160px;
+        height: 52px;
+        font-size: 20px;
+    }
+}
+
+/* Grands écrans */
+@media screen and (min-width: 1200px) {
+    .logo {
+        max-width: 450px;
+    }
+    
+    .card-main {
+        max-width: 300px;
+    }
+    
+    .card-icon img {
+        width: 120px;
+        height: 120px;
+    }
+    
+    .selection button {
+        width: 230px;
+        height: 90px;
+        font-size: 32px;
+    }
+}

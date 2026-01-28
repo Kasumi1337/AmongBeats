@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AmongsBeats</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img class="box" src="./assets/box.png" alt="box outline">
+    <img class="logo" src="./assets/logo.svg" alt="logo">
+    <div class="card">
+        <div class="card-head">
+            ANONYME
+        </div>
+        <div class="card-main">
+            <div class="card-icon">
+                <ion-icon onclick="changePfpLeft()" name="caret-back-outline"></ion-icon>
+                <img id="pp" src="./assets/icons/icon1.svg" alt="icon">
+                <ion-icon onclick="changePfpRight()" name="caret-forward-outline"></ion-icon>
+            </div>
+            <input type="text" name="name" id="username" placeholder="Enter your name...">
+        </div>
+    </div>
+    <br><br><br>
+    <div class="selection">
+        <button class="create-btn" id="create-btn">CREATE</button>
+        <button class="join-btn" id="join-btn">JOIN</button>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
